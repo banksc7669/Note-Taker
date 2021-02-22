@@ -39,7 +39,7 @@ class Store {
     addNotes(note) {
         const { title, text } = note;
 
-        const newNote = { title, text, id: uuidv1() };
+        const newNote = { title, text, id: uniqid() };
         console.log('newNote:', newNote)
 
         //the notes with the new note

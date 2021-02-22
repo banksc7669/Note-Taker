@@ -21,7 +21,7 @@ module.exports = function(app) {
   });
 
   app.delete("/api/notes/:id",function(req, res){
-    store.deleteNote(req.params.id).then(notes=>res.json(notes)).then(()=> res.json({ ok: true }));
+    store.removeNotes(req.params.id).then(notes=>res.json(notes)).then(()=> res.json({ ok: true }));
   });
 }
   
