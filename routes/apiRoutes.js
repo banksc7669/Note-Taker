@@ -16,7 +16,7 @@ module.exports = function(app) {
     store.getNotes().then(notes => res.json(notes));
   });
 
-  app.get("/api/notes", function(req, res) {
+  app.post("/api/notes", function(req, res) {
     store.addNotes(req.body).then(notes => res.json(notes));
   });
 
